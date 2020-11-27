@@ -1,0 +1,75 @@
+---
+title: "Final Project Proposal on Lingusitic Fractionalization"
+author: "Sahithi Adari"
+date: "10/30/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### *Statement of Purpose*
+The question driving this project is a simple one: What are the effects of globalization on linguistic fractionalization? And has the availability of the internet (as measured by usage) positively or negatively affected linguistic fractionalization within the 21st century? 
+
+By some estimates, 90% of the world's languages are going to die by the end of the 21st century. [^1] Other estimations put this number closer to 50% (at a rate of losing a language every 3 months) [^2], but regardless of how much, the end result is the same: we're losing the histories of people at a rapid rate. Because many small cultures rely on oral or written scriptures to tell the story of their people, we risk losing such an integral part of our human history through the loss of language. 
+
+Through this project I want to explore the ideas of how globalization, in some instances, are erasing divergences amongst small populations in favor of the majority: specifically globalization is diminishing fractionalization and encouraging the erasure of regional linguistic variations. Studies have shown that linguistic fractionalization benefits from the worst of globalization: "countries that have a high degree of fractionalization have less income redistribution, while capitalist countries that have a low degree of fractionalization have more income distribution."[^3] But the question remains how much of the fractionalization can be attributed to globalization trends? 
+
+I also want to explore the effect of the internet on linguistic fractionalization: given that the majority of the internet is in English are we erasing linguistic variations at a faster rate than before? 
+
+### *Data Source*
+
+* *Fractionalization*, Alberto Alesina, Arnaud Devleeschauwer, William Easterly, Sergio Kurlat & Romain Wacziargi [^4]
+  + Variables of interest: Language Fractionalization in 2000
+* Eurostat [^5] 
+  + Variables of interest include: Households - level of internet access; Households - reasons for not having internet access at home; Individuals' level of digital skills
+* OECD stats [^6]
+  + Variables of interest: Rural vs Urban populations 
+* *Ethnolinguistic Fractionalization*, Philip G. Roederiv [^7]
+  + Variables of interest: Ethnolinguistic Fractionalization (ELF) Indices, 1961 and 1985
+* WHO [^8]
+  + Variables of interest: Infant Mortality Rate
+* *Barro-Lee Educational Attainment*, Barro-Lee [^9]
+  +  Variables of interest: Education attainment by Age group (females)
+
+### *Plan to obtain data*
+Given that majority of the data being drawn upon come from research papers or non-governing agencies, this data would be considered “off-the-shelf” in that it will be easy to download. 
+
+### *Methodology*
+#### Data Wrangling:
+For the purposes of this project data wrangling will be primarily employed in order to a) clean up the data, b) align all the datasets to a single value or group of values, and c) merging. Through a short and very quick exploration of the different datasets, here are some examples of the sort of clean up needed: 
+
+* Country naming – Are the countries named the same across the different datasets? 
+* Exclusion of non-UN nations – because the datasets either includes or excludes certain countries, for simplicity sake we will just be focusing on current UN member nations. 
+* Aligning linguistic fractionalization – the 2 research papers primarily focused on linguistic fractionalization utilize 3 different methods of calculation for this specific variable. Would it be possible to use them one as the same or will they have to remain as three different variables? 
+* Units of analysis – would it make sense to look at the world broadly or just choose the top 10 most and least linguistically fractionalized countries in the analysis? Do we have enough data to look at the entirety of the world like that? Does it make more sense to better analyze the countries with the largest leap in terms of fractionalization from 1965 to 2001? 
+* 0 vs NA – how do the different datasets deal with 0 and does it make sense to use one value over the other? 
+      
+### *Data Visualizations*
+This project will try to answer the following questions through visualizations: 
+
+* By most recent measure, has linguistic fractionalization increase or decreased? 
+* Is there a relationship between upward mobility of populations over time (as measured by infant mortality rate, movement of populations from rural to urban dwelling, and average schooling years of women) and linguistic fractionalization in 1965, 1985 and 2001? Who are the outliers? 
+* What are the trends of globalization against the assumed trends of linguistic fractionalization? 
+* What are internet usage trends? 
+
+### *Machine Learning*
+A secondary aspect of this analysis is specifically looking at the effect of the internet on linguistic fractionalization. Since the dataset on the internet only has data from 2010 (at the latest), a machine learning aspect will be utilized to create a model that would predict rate of linguistic fractionalization for the 21st century. We will then use this new model to estimate and visualize the relationship between internet usage and linguistic fractionalization. 
+
+### *Success*
+To be very frank I believe I have a very ambitious plan and not that much time to really execute on it. As such success for me would be the one of the following: a) one analysis and measurement of globalization against linguistic fractionalization, as well as the measurement on internet usage across the world, or b) a deep dive into the linguistic fractionalization of a specific country (across all 3 measures of globalization) as well as measurement on internet usage for that country. Anything extra from that moment would be an added bonus. In my mind this all seems fairly straightforward but as our problems sets have taught me, the creation of data visualization rarely is. 
+
+[^1]: Hale, Ken. “Endangered Languages: On Endangered Languages and the Safeguarding of Diversity.” Language, vol. 68, no. 1, 1992, pp. 1–42. DOI.org (Crossref), doi:10.1353/lan.1992.0052.
+[^2]: New Estimates on the Rate of Global Language Loss - The Rosetta Project. https://rosettaproject.org/blog/02013/mar/28/new-estimates-on-rate-of-language-loss/.
+[^3]: Sturm, Jan-Egbert, and Jakob de Haan. “Income Inequality, Capitalism and Ethno-Linguistic Fractionalization.” SSRN Electronic Journal, 2014. DOI.org (Crossref), doi:10.2139/ssrn.2550652.
+[^4]: Alesina, Alberto, et al. Fractionalization. w9411, National Bureau of Economic Research, Jan. 2003, p. w9411. DOI.org (Crossref), doi:10.3386/w9411.
+[^5]: Database - Eurostat. https://ec.europa.eu/eurostat/data/database.
+[^6]: OECD Statistics. https://stats.oecd.org/. 
+[^7]: Ethnolinguistic Fractionalization. http://pages.ucsd.edu/~proeder/elf.htm.
+[^8]: Number of Infant Deaths. https://www.who.int/data/maternal-newborn-child-adolescent-ageing/documents/mca.
+[^9]: Barro-Lee Educational Attainment Data. http://www.barrolee.com/. 
+
+
+
+
